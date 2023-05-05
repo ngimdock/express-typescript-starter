@@ -15,8 +15,11 @@ jobs:
       - name: Add a comment to a newly created issue
         uses: peter-evans/create-or-update-comment@v3
         with:
-          issue-number: ${{github.event.issue.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
-            Thank you for your proposal to improve the project. 
-            We will take it into consideration for our next updates 🙏🏾.
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment][1]
+
+            [1]: https://github.com/peter-evans/create-or-update-comment
           reactions: '+1'
