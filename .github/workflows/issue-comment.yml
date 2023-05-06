@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Dump github context
-        run: echo '${{ toJson(github.event) }}' | jq
+        run: echo ${{ github.event.issue.number }}
         shell: bash
 
       - name: Add a comment to a newly created issue
