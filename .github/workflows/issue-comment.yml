@@ -8,13 +8,13 @@ jobs:
   comment-issue-with-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Dump github context
         run: echo ${{ github.event.issue.number }}
         shell: bash
 
       - name: Add a comment to a newly created issue
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
